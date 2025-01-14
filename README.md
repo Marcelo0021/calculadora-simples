@@ -2,12 +2,13 @@
 
 ![GitHub License](https://img.shields.io/github/license/MarceloMendes021/calculadora-simples)
 
-
-
-
 ## Descrição
 
-Este projeto é uma API REST de uma calculadora que permite realizar operações matemáticas básicas (soma, subtração, multiplicação e divisão). Foi desenvolvida utilizando Node.js e Express, com foco em simplicidade e funcionalidade.
+Este projeto é uma API REST de uma calculadora que permite realizar operações matemáticas básicas (soma, subtração, multiplicação e divisão). Foi desenvolvida utilizando JavaNode.js e Express, com foco em simplicidade e funcionalidade.
+
+## Linguagem Utilizada
+
+-**JavaScript:** Usado para o desenvolvimento da lógica da calculadora e na configuração da API.
 
 ## Estrutura do Projeto
 
@@ -34,12 +35,12 @@ Este projeto é uma API REST de uma calculadora que permite realizar operações
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   git clone https://github.com/MarceloMendes021/calculadora-simples
    ```
 
 2. Navegue até o diretório do projeto:
    ```bash
-   cd nome-do-repositorio
+   cd calculadora-simples
    ```
 
 3. Instale as dependências:
@@ -49,9 +50,11 @@ Este projeto é uma API REST de uma calculadora que permite realizar operações
 
 ## Uso
 
+
+
 1. Inicie o servidor:
    ```bash
-   node server.js
+   npm start
    ```
    O servidor estará disponível em: `http://localhost:3000`.
 
@@ -102,8 +105,4 @@ curl -X POST http://localhost:3000/calculate -H "Content-Type: application/json"
 
 ## Contribuição
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
-
-## Licença
-
-Este projeto está licenciado sob a [Licença MIT](LICENSE).
+Contribuições são bem-vindas!
