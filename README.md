@@ -1,6 +1,7 @@
 # Calculadora com API
 
-https://img.shields.io/npm/l/https%3A%2F%2Fgithub.com%2FMarcelo0021%2Fcalculadora-simples%2Fblob%2Fmain%2FLICENSE
+![GitHub License](https://img.shields.io/github/license/MarceloMendes021/calculadora-simples)
+
 
 
 
