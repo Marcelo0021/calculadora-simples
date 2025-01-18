@@ -14,16 +14,20 @@ Este projeto é uma API REST de uma calculadora que permite realizar operações
 
 - **app.js**: Configura o middleware e as rotas principais.
 - **server.js**: Inicializa o servidor na porta especificada.
-- **calculatorController.js**: Contém a lógica das operações matemáticas.
+- **calculatorAddController.js**: Contém a lógica da adição.
+- **calculatorDivideController.js**: Contém a lógica da divisão.
+- **calculatorMultiplyController.js**: Contém a lógica da multiplicação.
+- **calculatorSubtractController.js**: Contém a lógica da subtração.
 - **calculatorRoutes.js**: Define as rotas e conecta ao controller.
 
 ## Funcionalidades
 
-- Realizar operações de:
-  - **Adição**: `add`
-  - **Subtração**: `subtract`
-  - **Multiplicação**: `multiply`
-  - **Divisão**: `divide`
+A API oferece as seguintes operações matemáticas:
+
+- **Adição**: `POST /add`
+- **Subtração**: `POST /subtract`
+- **Multiplicação**: `POST /multiply`
+- **Divisão**: `POST /divide
 
 ## Tecnologias Utilizadas
 
@@ -34,13 +38,15 @@ Este projeto é uma API REST de uma calculadora que permite realizar operações
 ## Instalação
 
 1. Clone este repositório:
+
    ```bash
-   git clone https://github.com/MarceloMendes021/calculadora-simples
+   git clone https://github.com/MarceloMendes021/calculadora-api
    ```
 
 2. Navegue até o diretório do projeto:
+
    ```bash
-   cd calculadora-simples
+   cd calculadora-api
    ```
 
 3. Instale as dependências:
@@ -50,58 +56,129 @@ Este projeto é uma API REST de uma calculadora que permite realizar operações
 
 ## Uso
 
-
-
 1. Inicie o servidor:
+
    ```bash
    npm start
    ```
+
    O servidor estará disponível em: `http://localhost:3000`.
 
-2. Faça requisições para a API no endpoint `/calculate`:
+2. Faça requisições para a API nos endpoint abaixo:
 
-### Exemplo de Body para Requisições
+## Rotas e Exemplos
 
-Envie uma requisição POST para `/calculate` com o seguinte formato no corpo da requisição:
+### 1. Adição
 
-```json
-{
-  "operation": "add",
-  "number1": 5,
-  "number2": 3
-}
-```
-
-### Respostas
-
-- **Operação bem-sucedida**:
+- **Endpoint**: `POST /add`
+- **Descrição**: Soma dois números fornecidos.
+- **Body**:
   ```json
   {
-    "result": 8
+    "number1": 10,
+    "number2": 5
   }
   ```
-- **Erro de validação** (ex.: operação inválida ou divisão por 0):
+- **Resposta**:
   ```json
   {
-    "error": "Erro: Operação invalida"
+    "resultado": 15
   }
   ```
 
-## Rotas
+---
 
-- **POST /calculate**  
-  Realiza operações matemáticas. Os parâmetros são passados no corpo da requisição:
-  - `operation`: Tipo da operação (`add`, `subtract`, `multiply`, `divide`).
-  - `number1`: Primeiro número (obrigatório).
-  - `number2`: Segundo número (obrigatório).
+### 2. Subtração
+
+- **Endpoint**: `POST /subtract`
+- **Descrição**: Subtrai o segundo número do primeiro.
+- **Body**:
+  ```json
+  {
+    "number1": 10,
+    "number2": 5
+  }
+  ```
+- **Resposta**:
+  ```json
+  {
+    "resultado": 5
+  }
+  ```
+
+---
+
+### 3. Multiplicação
+
+- **Endpoint**: `POST /multiply`
+- **Descrição**: Multiplica dois números fornecidos.
+- **Body**:
+  ```json
+  {
+    "number1": 10,
+    "number2": 5
+  }
+  ```
+- **Resposta**:
+  ```json
+  {
+    "resultado": 50
+  }
+  ```
+
+---
+
+### 4. Divisão
+
+- **Endpoint**: `POST /divide`
+- **Descrição**: Divide o primeiro número pelo segundo.
+- **Body**:
+  ```json
+  {
+    "number1": 10,
+    "number2": 5
+  }
+  ```
+- **Resposta**:
+  ```json
+  {
+    "resultado": 2
+  }
+  ```
+- **Erro para divisão por zero**:
+  ```json
+  {
+    "error": "Não é possivel realizar divisão por 0"
+  }
+  ```
+
+---
 
 ## Testes
 
 Você pode testar a API utilizando ferramentas como [Postman](https://www.postman.com/) ou via terminal com cURL:
 
+### Exemplo com cURL
+
 ```bash
-curl -X POST http://localhost:3000/calculate -H "Content-Type: application/json" -d '{"operation": "multiply", "number1": 4, "number2": 5}'
+curl -X POST http://localhost:3000/add -H "Content-Type: application/json" -d '{"number1": 4, "number2": 5}'
 ```
+
+### Testando Operações com Postman
+
+1. Abra o Postman.
+2. Configure uma requisição do tipo `POST`.
+3. Insira a URL correspondente ao endpoint (por exemplo, `http://localhost:3000/add`).
+4. No corpo da requisição, use o formato JSON adequado:
+   ```json
+   {
+     "number1": 10,
+     "number2": 5
+   }
+   ```
+5. Clique em **Send** e verifique a resposta.
+
+---
 
 ## Contribuição
 
