@@ -1,6 +1,6 @@
 # Calculadora com API
 
-![GitHub License](https://img.shields.io/github/license/MarceloMendes021/calculadora-simples)
+![GitHub License](https://img.shields.io/github/license/MarceloMendes021/calculadora-api)
 
 ## Descrição
 
@@ -54,7 +54,7 @@ A API oferece as seguintes operações matemáticas:
    npm install
    ```
 
-## Uso
+## U
 
 1. Inicie o servidor:
 
@@ -163,22 +163,6 @@ Você pode testar a API utilizando ferramentas como [Postman](https://www.postma
 ```bash
 curl -X POST http://localhost:3000/add -H "Content-Type: application/json" -d '{"number1": 4, "number2": 5}'
 ```
-
-### Testando Operações com Postman
-
-1. Abra o Postman.
-2. Configure uma requisição do tipo `POST`.
-3. Insira a URL correspondente ao endpoint (por exemplo, `http://localhost:3000/add`).
-4. No corpo da requisição, use o formato JSON adequado:
-   ```json
-   {
-     "number1": 10,
-     "number2": 5
-   }
-   ```
-5. Clique em **Send** e verifique a resposta.
-
----
 
 ## Contribuição
 
