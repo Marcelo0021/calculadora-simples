@@ -4,7 +4,7 @@
 
 ## Descrição
 
-Este projeto é uma API REST de uma calculadora que permite realizar operações matemáticas básicas (soma, subtração, multiplicação e divisão). Foi desenvolvida utilizando JavaNode.js e Express, com foco em simplicidade e funcionalidade.
+Este projeto é uma API REST de uma calculadora que permite realizar operações matemáticas básicas (soma, subtração, multiplicação e divisão). Foi desenvolvida utilizando Node.js e Express, com foco em simplicidade e funcionalidade.
 
 ## Linguagem Utilizada
 
