@@ -7,6 +7,6 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.use("/calculate", calculatorRoutes);
+app.use("/", calculatorRoutes);
 
 module.exports = app;
